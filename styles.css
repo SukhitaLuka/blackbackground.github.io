@@ -1,18 +1,25 @@
-body {
-  background-color: black;
-  margin: 0;
-  padding: 0;
+@keyframes wavy {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(25px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background-color: black;
 }
 
-.container {
-  text-align: center;
-}
-
-h1 {
+.wave {
   font-size: 48px;
-  color: white;
+  fill: white;
+  animation: wavy 2s infinite;
 }
